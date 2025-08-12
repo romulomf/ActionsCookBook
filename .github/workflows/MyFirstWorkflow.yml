@@ -9,8 +9,6 @@ jobs:
     name: My first job
     runs-on: ubuntu/latest
     steps:
-      - name: Greet the user
-        shell: bash
-        run: |
+        - run: |
             echo "Hello world 👋🏻 from ${{ github.actor }}."
             echo "Current branch is '${{ github.ref }}'."
