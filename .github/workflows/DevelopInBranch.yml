@@ -10,7 +10,4 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - uses: devops-actions/actionlint@v0.1.9
-      - run: |
-          echo "Workflow triggered in branch '${{ github.ref }}'."
-          echo "Workflow triggered by event '${{ github.event_name }}'."
-          echo "Workflow triggered by actor '${{ github.actor }}'."
+      - run: echo "${{ github.event.pull_request.title }}"
